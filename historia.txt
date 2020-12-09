@@ -1,4 +1,3 @@
 Hola, soy Sergio Corzo
-Soy Chiapaneco.
-Soy desarrollador web.
-Me gusta tomar café.
+Soy Chiapaneco, de un pueblo cerca a la playa.
+Me gusta tomar café
