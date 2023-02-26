@@ -1,0 +1,21 @@
+.container-personal-info {
+  flex-direction: row; }
+
+.carusel-container .card-container .opacity-container {
+  background-color: #000;
+  opacity: 0.4; }
+.carusel-container .card-container .opacity-container:hover {
+  opacity: 0; }
+.carusel-container .card-container a {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  color: #222; }
+.carusel-container .card-container a:hover {
+  background-color: green;
+  color: #fefefe;
+  border-radius: 0 0 10px 10px; }
+
+ul {
+  width: 68%; }
+
+/*# sourceMappingURL=tablet.css.map */

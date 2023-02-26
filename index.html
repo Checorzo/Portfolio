@@ -1,15 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta name="description" content="Soy Sergio corzo. Desarrollador Web, interezado en React y Web Components. Me gustan los retos CSS">
-       
-       <title>Sergio Corzo</title>
-       <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
-       <link href="css/estilos.css" rel="stylesheet">
-    
-   </head>
-   <body>
-   </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Soy Sergio corzo. Desarrollador Web, interezado en React y Web Components. Me gustan los retos CSS"
+    />
+
+    <title>Sergio Hercor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)" />
+  </head>
+  <body>
+    <header>
+      <!-- menú de navegacion -->
+      <nav class="navbar-container">
+        <ul>
+          <li>
+            <a class="about" href="#About">About</a>
+          </li>
+          <li>
+            <a class="portfolio" href="#Portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="contactMe" href="#ContactMe">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <!-- <h1>Sergio Hercor</h1> -->
+      <section id="About" class="container-personal-info">
+        <!-- Seccion de presentacion -->
+        <article class="personal-info">
+          <p>
+            I'm Sergio <span>Hernández Corzo</span>. <br />I'm a JavaScript
+            Frontend Developer. Currenly I'm learning React and Web Co mponents
+          </p>
+        </article>
+        <img
+          src="./assets/Profile-image.jpg"
+          alt="Sergio Hercor profile photo"
+        />
+        <!-- -Breve descripcion -->
+        <!-- -Foto mia con un fondo mamalón -->
+        <!-- Agregar una animacion que mezcle los apellidos -->
+      </section>
+      <!-- <section> -->
+      <!--    <!-1- Seccion de habilidades -1-> -->
+      <!--    <!-1- -Que domino -1-> -->
+      <!--    <!-1- -Las que estouy aprendiendo -1-> -->
+      <!-- </section> -->
+      <section id="Portfolio" class="portfolio-container">
+        <!-- Seciion de proyectos -->
+        <!-- -Carrusel de proyectos -->
+        <!-- -modal para ver más detalles de cada proyecto -->
+        <h2>Portfolio</h2>
+        <div class="carusel-container">
+          <div class="card-container card1">
+             <div class="image-container">
+                <img class="image-proyect" src="./assets/calculadora.png" 
+                    alt="Imagen de la calculadora" 
+                    srcset=""/>
+             </div>
+            <div class="description-container">
+               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
+            </div> 
+               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
+               <div class="opacity-container"></div>
+          </div>
+          <div class="card-container card2">
+             <div class="image-container">
+                <img class="image-proyect" src="./assets/calculadora.png" 
+                    alt="Imagen de la calculadora" 
+                    srcset=""/>
+             </div>
+            <div class="description-container">
+               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
+            </div> 
+               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
+               <div class="opacity-container"></div>
+          </div>
+          <div class="card-container card3"> 
+             <div class="image-container">
+                <img class="image-proyect" src="./assets/calculadora.png" 
+                    alt="Imagen de la calculadora" 
+                    srcset=""/>
+             </div>
+            <div class="description-container">
+               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
+            </div> 
+               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
+               <div class="opacity-container"></div>
+          </div>
+          <div class="card-container card4">
+             <div class="image-container">
+                <img class="image-proyect" src="./assets/calculadora.png" 
+                    alt="Imagen de la calculadora" 
+                    srcset=""/>
+             </div>
+            <div class="description-container">
+               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
+            </div> 
+               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
+               <div class="opacity-container"></div>
+          </div>
+        </div>
+      </section>
+      <section id="ContactMe" class="contact-container">
+        <!-- Seccion de formulario para contactarme -->
+      </section>
+    </main>
+    <footer>
+      <!-- Seccion de contacto y redes sociales -->
+    </footer>
+    <!-- <script src="./js/index.js"></script> -->
+  </body>
 </html>
