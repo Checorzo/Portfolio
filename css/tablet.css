@@ -1,21 +1,44 @@
 .container-personal-info {
-  flex-direction: row; }
+  flex-direction: row;
+  gap: 30px; }
+  .container-personal-info .personal-info {
+    width: 40rem; }
+  .container-personal-info p {
+    text-align: start; }
 
-.carusel-container .card-container .opacity-container {
-  background-color: #000;
+.opacity-container {
+  background-color: #123512A8;
   opacity: 0.4; }
-.carusel-container .card-container .opacity-container:hover {
+
+.opacity-container:hover {
   opacity: 0; }
-.carusel-container .card-container a {
+
+.card-button {
   background-color: #fff;
   border-radius: 0 0 10px 10px;
   color: #222; }
-.carusel-container .card-container a:hover {
-  background-color: green;
+
+.card-button:hover {
+  background-color: #228822;
   color: #fefefe;
   border-radius: 0 0 10px 10px; }
 
-ul {
+.navbar-container ul {
   width: 68%; }
+  .navbar-container ul li a:hover {
+    padding-inline: 10px;
+    border-radius: 10px;
+    border: 2px solid #00ff0a;
+    border-top: 0;
+    transition: box-shadow cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+    box-shadow: 0 7px 10px 0 #228822; }
+
+.modal-image-container {
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  column-gap: 10px;
+  align-items: center;
+  color: #fff; }
 
 /*# sourceMappingURL=tablet.css.map */

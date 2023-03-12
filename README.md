@@ -12,9 +12,9 @@ hasta la fecha por Sergio.
 ## Objetivos
 La pagina _web_ tendra:
 - colorres y tipografía fovorables.
-- un menú de navegacion con enlaces a seciones de la misma pagina
-- un texto de presentacion y fotografía informal de Sergio
-- un carrusel para mostrar los proyectos más importantes
+- [x] un menú de navegacion con enlaces a seciones de la misma pagina
+- [x] un texto de presentacion y fotografía informal de Sergio
+- [x] un carrusel para mostrar los proyectos más importantes
 - un formulario para contacto
 - un pie de pagina donde se mostraran enlaces a las redes sociles.
 

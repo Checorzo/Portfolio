@@ -10,11 +10,49 @@
 
     <title>Sergio Hercor</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/favicon_io/favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("L1EPeYoJrYJAZdMJH");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = (Math.random() * 100000) | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_7moyle2", `template_8x57xy4`, this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -22,13 +60,13 @@
       <nav class="navbar-container">
         <ul>
           <li>
-            <a class="about" href="#About">About</a>
+            <a class="about" ref="#About">About</a>
           </li>
           <li>
-            <a class="portfolio" href="#Portfolio">Portfolio</a>
+            <a class="portfolio" ref="#Portfolio">Portfolio</a>
           </li>
           <li>
-            <a class="contactMe" href="#ContactMe">Contact me</a>
+            <a class="contactMe" ref="#ContactMe">Contact me</a>
           </li>
         </ul>
       </nav>
@@ -39,8 +77,7 @@
         <!-- Seccion de presentacion -->
         <article class="personal-info">
           <p>
-            I'm Sergio <span>Hernández Corzo</span>. <br />I'm a JavaScript
-            Frontend Developer. Currenly I'm learning React and Web Co mponents
+            Soy Sergio <span>Hernández Corzo</span>. Soy un desarrollador Frontend en JavaScript. Actualmente estoy aprendiendo React y Web Components. Tambien me interesa aprender diseño web, así como las buenas practicas de programción y desarrollo.
           </p>
         </article>
         <img
@@ -62,63 +99,272 @@
         <!-- -modal para ver más detalles de cada proyecto -->
         <h2>Portfolio</h2>
         <div class="carusel-container">
-          <div class="card-container card1">
-             <div class="image-container">
-                <img class="image-proyect" src="./assets/calculadora.png" 
-                    alt="Imagen de la calculadora" 
-                    srcset=""/>
-             </div>
-            <div class="description-container">
-               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
-            </div> 
-               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
-               <div class="opacity-container"></div>
+          <div class="card-container card-container-normal card">
+            <div class="image-container">
+              <img
+                class="image-proyect"
+                src="./assets/calculadora.png"
+                alt="Imagen de la calculadora"
+                srcset=""
+              />
+              <div class="description-container">
+                <p>
+                  Es una calculadora para realizar operaciones sencillas como
+                  sumar, restar, manipular y dividir. Esta aplicacion fue creada
+                  con las siguientes tecnologias:<br /><br />
+                  HTML<br />
+                  CSS<br />
+                  JavaScript<br />
+                  Emailjs<br /><br />
+                  <a href="https://github.com/SergioCorzo/calculadora">Link</a>
+                  del repositorio.
+                </p>
+              </div>
+              <div class="opacity-container"></div>
+            </div>
+            <a
+              class="card-button"
+              href="https://sergiocorzo.github.io/calculadora/"
+              >Calculadora
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H10C11.1046
+12 12 11.1046 12 10V8H10V10H4V4H6V2Z"
+                  fill="#ff7777"
+                />
+                <path
+                  d="M9.20711 1H12.5C12.7761 1 13 1.22386 13 1.5V4.79289C13 5.23835 12.4614
+5.46143 12.1464 5.14645L11.182 4.18197L8.82493 6.53902C8.43441 6.92954 7.80124
+6.92954 7.41072 6.53902C7.0202 6.14849 7.0202 5.51533 7.41072 5.1248L9.76776
+2.76776L8.85355 1.85355C8.53857 1.53857 8.76165 1 9.20711 1Z"
+                  fill="#ff7777"
+                />
+              </svg>
+            </a>
+            <span class="expand-icon expand"></span>
           </div>
-          <div class="card-container card2">
-             <div class="image-container">
-                <img class="image-proyect" src="./assets/calculadora.png" 
-                    alt="Imagen de la calculadora" 
-                    srcset=""/>
-             </div>
-            <div class="description-container">
-               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
-            </div> 
-               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
-               <div class="opacity-container"></div>
-          </div>
-          <div class="card-container card3"> 
-             <div class="image-container">
-                <img class="image-proyect" src="./assets/calculadora.png" 
-                    alt="Imagen de la calculadora" 
-                    srcset=""/>
-             </div>
-            <div class="description-container">
-               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
-            </div> 
-               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
-               <div class="opacity-container"></div>
-          </div>
-          <div class="card-container card4">
-             <div class="image-container">
-                <img class="image-proyect" src="./assets/calculadora.png" 
-                    alt="Imagen de la calculadora" 
-                    srcset=""/>
-             </div>
-            <div class="description-container">
-               <p>Consectetur vitae impedit officiis laborum blanditiis Neque a repellendus quis obcaecati cumque. </p>
-            </div> 
-               <a href="https://sergiocorzo.github.io/calculadora/">Calculadora</a>
-               <div class="opacity-container"></div>
-          </div>
+          <!-- <div class="card-container card-container-normal card"> -->
+          <!--   <div class="image-container"> -->
+          <!--     <img -->
+          <!--       class="image-proyect" -->
+          <!--       src="./assets/Profile-image.jpg" -->
+          <!--       alt="Imagen de la calculadora" -->
+          <!--       srcset="" -->
+          <!--     /> -->
+          <!--     <div class="description-container"> -->
+          <!--       <p> -->
+          <!--         Consectetur vitae impedit officiis laborum blanditiis Neque a -->
+          <!--         repellendus quis obcaecati cumque. -->
+          <!--       </p> -->
+          <!--     </div> -->
+          <!--     <div class="opacity-container"></div> -->
+          <!--   </div> -->
+          <!--   <a -->
+          <!--     class="card-button" -->
+          <!--     href="https://sergiocorzo.github.io/calculadora/">Personal Page -->
+          <!--     <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+          <!-- <path d="M6 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H10C11.1046 -->
+          <!-- 12 12 11.1046 12 10V8H10V10H4V4H6V2Z" fill="#ff7777"/> -->
+          <!-- <path d="M9.20711 1H12.5C12.7761 1 13 1.22386 13 1.5V4.79289C13 5.23835 12.4614 -->
+          <!-- 5.46143 12.1464 5.14645L11.182 4.18197L8.82493 6.53902C8.43441 6.92954 7.80124 -->
+          <!-- 6.92954 7.41072 6.53902C7.0202 6.14849 7.0202 5.51533 7.41072 5.1248L9.76776 -->
+          <!-- 2.76776L8.85355 1.85355C8.53857 1.53857 8.76165 1 9.20711 1Z" fill="#ff7777"/> -->
+          <!-- </svg> -->
+          <!--   </a> -->
+          <!--   <span class="expand-icon expand"></span> -->
+          <!-- </div> -->
+          <!-- <div class="card-container card-container-normal card"> -->
+          <!--   <div class="image-container"> -->
+          <!--     <img -->
+          <!--       class="image-proyect" -->
+          <!--       src="./assets/calculadora.png" -->
+          <!--       alt="Imagen de la calculadora" -->
+          <!--       srcset="" -->
+          <!--     /> -->
+          <!--     <div class="description-container"> -->
+          <!--       <p> -->
+          <!--         Consectetur vitae impedit officiis laborum blanditiis Neque a -->
+          <!--         repellendus quis obcaecati cumque. -->
+          <!--       </p> -->
+          <!--     </div> -->
+          <!--     <div class="opacity-container"></div> -->
+          <!--   </div> -->
+          <!--   <a -->
+          <!--     class="card-button" -->
+          <!--     href="https://sergiocorzo.github.io/calculadora/">Calculadora -->
+          <!--   <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+          <!-- <path d="M6 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H10C11.1046 -->
+          <!-- 12 12 11.1046 12 10V8H10V10H4V4H6V2Z" fill="#ff7777"/> -->
+          <!-- <path d="M9.20711 1H12.5C12.7761 1 13 1.22386 13 1.5V4.79289C13 5.23835 12.4614 -->
+          <!-- 5.46143 12.1464 5.14645L11.182 4.18197L8.82493 6.53902C8.43441 6.92954 7.80124 -->
+          <!-- 6.92954 7.41072 6.53902C7.0202 6.14849 7.0202 5.51533 7.41072 5.1248L9.76776 -->
+          <!-- 2.76776L8.85355 1.85355C8.53857 1.53857 8.76165 1 9.20711 1Z" fill="#ff7777"/> -->
+          <!-- </svg> -->
+          <!--   </a> -->
+          <!--   <span class="expand-icon expand"></span> -->
+          <!-- </div> -->
+          <!-- <div class="card-container card-container-normal card"> -->
+          <!--   <div class="image-container"> -->
+          <!--     <img -->
+          <!--       class="image-proyect" -->
+          <!--       src="./assets/calculadora.png" -->
+          <!--       alt="Imagen de la calculadora" -->
+          <!--       srcset="" -->
+          <!--     /> -->
+          <!--     <div class="description-container"> -->
+          <!--       <p> -->
+          <!--         Consectetur vitae impedit officiis laborum blanditiis Neque a -->
+          <!--         repellendus quis obcaecati cumque. -->
+          <!--       </p> -->
+          <!--     </div> -->
+          <!--     <div class="opacity-container"></div> -->
+          <!--   </div> -->
+          <!--   <a -->
+          <!--     class="card-button" -->
+          <!--     href="https://sergiocorzo.github.io/calculadora/">Calculadora -->
+          <!--     <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+          <!-- <path d="M6 2H4C2.89543 2 2 2.89543 2 4V10C2 11.1046 2.89543 12 4 12H10C11.1046 -->
+          <!-- 12 12 11.1046 12 10V8H10V10H4V4H6V2Z" fill="#ff7777"/> -->
+          <!-- <path d="M9.20711 1H12.5C12.7761 1 13 1.22386 13 1.5V4.79289C13 5.23835 12.4614 -->
+          <!-- 5.46143 12.1464 5.14645L11.182 4.18197L8.82493 6.53902C8.43441 6.92954 7.80124 -->
+          <!-- 6.92954 7.41072 6.53902C7.0202 6.14849 7.0202 5.51533 7.41072 5.1248L9.76776 -->
+          <!-- 2.76776L8.85355 1.85355C8.53857 1.53857 8.76165 1 9.20711 1Z" fill="#ff7777"/> -->
+          <!-- </svg> -->
+          <!--   </a> -->
+          <!--   <span class="expand-icon expand"></span> -->
+          <!-- </div> -->
         </div>
       </section>
+      <!-- Fin de sección de Portfolio -->
       <section id="ContactMe" class="contact-container">
         <!-- Seccion de formulario para contactarme -->
+        <form
+          id="contact-form"
+          name="contact-form"
+          action=""
+          method="get"
+          class="contact-me"
+        >
+          <fieldset>
+            <legend>Datos de contacto</legend>
+            <ul>
+              <input type="hidden" name="contact_number" />
+              <li class="item-input">
+                <label for="first-name">Nombre completo:</label>
+                <input type="text" id="first-name" name="user_name" class="input" required />
+              </li>
+              <li class="item-input">
+                <label for="contact-email">Email:</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  placeholder="some@mail.com"
+                  name="user_email"
+                  class="input"
+                  required
+                />
+              </li>
+              <li class="text-area">
+                <label for="contact-message">Dejame un mensaje</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                  placeholder="E.g. Hi, I really like your job. I'd' excite reach out with you..."
+                ></textarea>
+              </li>
+              <li>
+                <input type="submit" class="submit" value="Enviar" />
+              </li>
+            </ul>
+          </fieldset>
+        </form>
       </section>
     </main>
+    <div class="modal-window" id="modal">
+      <span class="close" id="close-modal">x</span>
+    </div>
     <footer>
       <!-- Seccion de contacto y redes sociales -->
+      <section>
+        <a href="https://github.com/SergioCorzo">
+          <svg
+            height="32"
+            aria-hidden="true"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="32"
+            data-view-component="true"
+            class="octicon octicon-mark-github v-align-middle"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/sergio-hcorzo/">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM16.9605 19.8778H11.5216V36.2196H16.9605V19.8778ZM17.3188 14.8227C17.2835 13.2204 16.1377 12 14.277 12C12.4164 12 11.2 13.2204 11.2 14.8227C11.2 16.3918 12.3805 17.6473 14.2064 17.6473H14.2412C16.1377 17.6473 17.3188 16.3918 17.3188 14.8227ZM36.5754 26.8497C36.5754 21.8303 33.8922 19.4941 30.3131 19.4941C27.4254 19.4941 26.1326 21.0802 25.4107 22.1929V19.8783H19.9711C20.0428 21.4117 19.9711 36.22 19.9711 36.22H25.4107V27.0934C25.4107 26.605 25.446 26.1178 25.5898 25.7681C25.9829 24.7924 26.8779 23.7822 28.3805 23.7822C30.3494 23.7822 31.1365 25.2807 31.1365 27.4767V36.2196H36.5752L36.5754 26.8497Z"
+              fill="black"
+            />
+          </svg>
+        </a>
+        <a href="https://platzi.com/p/Checorzo/">
+          <svg
+            height="32"
+            width="32"
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Platzi</title>
+            <path
+              d="M10.6392 1.127L2.486 9.282a3.842 3.842 0 000 5.4361l8.1552 8.1552a3.842 3.842 0 005.4361 0l2.719-2.718-2.719-2.7181-2.718 2.718-8.1562-8.1551 8.1552-8.1552 5.437 5.4371-5.437 5.4361 2.718 2.719 5.4371-5.437a3.842 3.842 0 000-5.4372l-5.448-5.436a3.828 3.828 0 00-5.4252 0z"
+            />
+          </svg>
+        </a>
+        <a href="https://twitter.com/SergioC38456585">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+          <svg
+            fill="#000000"
+            height="32px"
+            width="32px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="-143 145 512 512"
+            xml:space="preserve"
+          >
+            <path
+              d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M215.2,361.2
+	c0.1,2.2,0.1,4.5,0.1,6.8c0,69.5-52.9,149.7-149.7,149.7c-29.7,0-57.4-8.7-80.6-23.6c4.1,0.5,8.3,0.7,12.6,0.7
+	c24.6,0,47.3-8.4,65.3-22.5c-23-0.4-42.5-15.6-49.1-36.5c3.2,0.6,6.5,0.9,9.9,0.9c4.8,0,9.5-0.6,13.9-1.9
+	C13.5,430-4.6,408.7-4.6,383.2v-0.6c7.1,3.9,15.2,6.3,23.8,6.6c-14.1-9.4-23.4-25.6-23.4-43.8c0-9.6,2.6-18.7,7.1-26.5
+	c26,31.9,64.7,52.8,108.4,55c-0.9-3.8-1.4-7.8-1.4-12c0-29,23.6-52.6,52.6-52.6c15.1,0,28.8,6.4,38.4,16.6
+	c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-8.3C234.4,344.5,225.5,353.7,215.2,361.2z"
+            />
+          </svg>
+        </a>
+      </section>
     </footer>
-    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/index.js"></script>
   </body>
 </html>
