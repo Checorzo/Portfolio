@@ -118,10 +118,12 @@ body {
 .expand-icon {
   display: inline-block;
   position: absolute;
-  width: 30px;
+  width: 31px;
   height: 30px;
-  background-image: url(/assets/icons/expand.svg);
-  background-size: contain;
+  background-color: #333;
+  border: 1px solid #333;
+  padding: 4px;
+  border-radius: 8px;
   top: 8px;
   right: 12px;
   cursor: pointer; }
@@ -144,19 +146,20 @@ body {
     top: 0; }
 
 .description-container {
-  overflow: hidden;
   opacity: 0.9;
   visibility: hidden; }
   .description-container p {
     min-width: 300px;
     min-height: 300px;
     max-height: 600px;
-    margin-left: 20px;
+    margin: 2rem;
     background-color: #ffffff;
     color: #333;
     font-size: 1.8rem;
     padding: 20px;
     border-radius: 10px; }
+    .description-container p .patj {
+      fill: #333; }
 
 .no-visible {
   visibility: visible; }
@@ -184,12 +187,13 @@ body {
 .modal-window-open {
   background-color: #123512A8;
   opacity: 1;
-  z-index: 1; }
+  z-index: 2; }
 
 .modal-image-container {
   display: flex;
   flex-direction: column;
-  row-gap: 10px; }
+  row-gap: 10px;
+  overflow-y: scroll; }
 
 .card-container-normal {
   position: relative;

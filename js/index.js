@@ -67,7 +67,7 @@ open.forEach(element =>{
    const t = e.target;
    console.log(`voy a abrir la card del proyecto selecinado.
       Soy el elemento ${t.parentElement}`) ;
-   card = t.parentElement;
+   card = t.parentElement.parentElement;
    console.log(card);
       cloneCard = card.firstElementChild.cloneNode(true);
       cardModal(cloneCard);
@@ -83,6 +83,7 @@ closeModal.addEventListener("click", ()=>{
 modal.addEventListener("click", ()=>{
    // e.preventDefault();
    // modal.removeChild(cloneCard);
+   modal.removeChild(cloneCard);
    modal.classList.remove("modal-window-open");
 })
 const cardModal = function(card){
