@@ -64,6 +64,7 @@ linkButtons.addEventListener("click", (e) => {
 open.forEach(element =>{
    element.addEventListener("click",(e)=>{
    // e.preventDefault();
+   e.stopPropagation();
    const t = e.target;
    console.log(`voy a abrir la card del proyecto selecinado.
       Soy el elemento ${t.parentElement}`) ;
