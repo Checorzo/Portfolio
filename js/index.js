@@ -63,17 +63,25 @@ linkButtons.addEventListener("click", (e) => {
 // console.log(open[1]);
 open.forEach(element =>{
    element.addEventListener("click",(e)=>{
-   // e.preventDefault();
+   
+     const t = e.target;
+     e.target.className === "expand-icon expand" ?
+       (card = t.parentElement,
+       console.log("Soy el contenedor del boton para expandir imagen"))
+       :
+       (card = t.parentElement.parentElement,
+       console.log("Soy el icono para expandir imagen"));
+     
+   e.preventDefault();
    e.stopPropagation();
-   const t = e.target;
    console.log(`voy a abrir la card del proyecto selecinado.
-      Soy el elemento ${t.parentElement}`) ;
-   card = t.parentElement.parentElement;
+      Soy el elemento ${t.parentElement.parentElement}`) ;
+   // card = t.parentElement; 
    console.log(card);
       cloneCard = card.firstElementChild.cloneNode(true);
       cardModal(cloneCard);
 
-   })
+   });
 })
 
 closeModal.addEventListener("click", ()=>{
