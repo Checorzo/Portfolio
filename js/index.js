@@ -65,15 +65,8 @@ open.forEach(element =>{
    element.addEventListener("click",(e)=>{
    
      const t = e.target;
-     e.target.className === "expand-icon expand" ?
-       (card = t.parentElement,
-       console.log("Soy el contenedor del boton para expandir imagen"))
-       :
-       (card = t.parentElement.parentElement,
-       console.log("Soy el icono para expandir imagen"));
+       card = t.parentElement
      
-   e.preventDefault();
-   e.stopPropagation();
    console.log(`voy a abrir la card del proyecto selecinado.
       Soy el elemento ${t.parentElement.parentElement}`) ;
    // card = t.parentElement; 
@@ -92,7 +85,7 @@ closeModal.addEventListener("click", ()=>{
 modal.addEventListener("click", ()=>{
    // e.preventDefault();
    // modal.removeChild(cloneCard);
-   modal.removeChild(cloneCard);
+   // modal.removeChild(cloneCard);
    modal.classList.remove("modal-window-open");
 })
 const cardModal = function(card){
